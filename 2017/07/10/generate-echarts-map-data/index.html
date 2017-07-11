@@ -3,14 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>notes</title>
+  <title>generate echarts map data | notes</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="notes">
-<meta property="og:url" content="https://todayisall.github.io/index.html">
+  <meta name="description" content="生成echarts 的mapdata数据// todo 附上,主要制作好的地图源文件. 总体分两步.  获取geoJson数据. 优化geoJson数据.(geoJson 文件太大, 一般优化后至少是原来的1/10).  获取geoJson数据.目前没有发现可以直接使用的geoJson 数据(除了官网提供的数据), 目前都是在地图网站下载的 *.shp文件, 然后通过工具转换成geoJson. 安">
+<meta name="keywords" content="echart geoJson map data">
+<meta property="og:type" content="article">
+<meta property="og:title" content="generate echarts map data">
+<meta property="og:url" content="https://todayisall.github.io/2017/07/10/generate-echarts-map-data/index.html">
 <meta property="og:site_name" content="notes">
+<meta property="og:description" content="生成echarts 的mapdata数据// todo 附上,主要制作好的地图源文件. 总体分两步.  获取geoJson数据. 优化geoJson数据.(geoJson 文件太大, 一般优化后至少是原来的1/10).  获取geoJson数据.目前没有发现可以直接使用的geoJson 数据(除了官网提供的数据), 目前都是在地图网站下载的 *.shp文件, 然后通过工具转换成geoJson. 安">
+<meta property="og:updated_time" content="2017-07-10T13:32:04.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="notes">
+<meta name="twitter:title" content="generate echarts map data">
+<meta name="twitter:description" content="生成echarts 的mapdata数据// todo 附上,主要制作好的地图源文件. 总体分两步.  获取geoJson数据. 优化geoJson数据.(geoJson 文件太大, 一般优化后至少是原来的1/10).  获取geoJson数据.目前没有发现可以直接使用的geoJson 数据(除了官网提供的数据), 目前都是在地图网站下载的 *.shp文件, 然后通过工具转换成geoJson. 安">
   
     <link rel="alternate" href="/atom.xml" title="notes" type="application/atom+xml">
   
@@ -63,47 +68,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-一日一句" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/07/11/一日一句/" class="article-date">
-  <time datetime="2017-07-11T13:23:10.000Z" itemprop="datePublished">2017-07-11</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/11/一日一句/">一日一句</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="第一天-2017-07-11-21-23-10"><a href="#第一天-2017-07-11-21-23-10" class="headerlink" title="第一天(2017-07-11 21:23:10)."></a>第一天(2017-07-11 21:23:10).</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">人生有两个悲剧, 第一个是想得到的得不到,第二个是想得到的得到了.</div><div class="line">                                            -- 王尔德.</div></pre></td></tr></table></figure>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://todayisall.github.io/2017/07/11/一日一句/" data-id="cj4zm0m690001f69fk1b4n3av" class="article-share-link">Partager</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/生活/">生活</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-generate-echarts-map-data" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-generate-echarts-map-data" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/07/10/generate-echarts-map-data/" class="article-date">
   <time datetime="2017-07-10T13:00:30.000Z" itemprop="datePublished">2017-07-10</time>
@@ -116,8 +81,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/10/generate-echarts-map-data/">generate echarts map data</a>
+    <h1 class="article-title" itemprop="name">
+      generate echarts map data
     </h1>
   
 
@@ -148,51 +113,28 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-mac-install-nginx" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/07/09/mac-install-nginx/" class="article-date">
-  <time datetime="2017-07-09T13:37:23.000Z" itemprop="datePublished">2017-07-09</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+    <a href="/2017/07/11/一日一句/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Récent</strong>
+      <div class="article-nav-title">
         
+          一日一句
+        
+      </div>
+    </a>
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/09/mac-install-nginx/">mac install nginx</a>
-    </h1>
   
+    <a href="/2017/07/09/mac-install-nginx/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Ancien</strong>
+      <div class="article-nav-title">mac install nginx</div>
+    </a>
+  
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ brew install nginx</div></pre></td></tr></table></figure>
-<h3 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ nginx</div></pre></td></tr></table></figure>
-<h3 id="重启"><a href="#重启" class="headerlink" title="重启"></a>重启</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ nginx -s reload</div></pre></td></tr></table></figure>
-<h3 id="停止"><a href="#停止" class="headerlink" title="停止"></a>停止</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ nginx -s stop</div></pre></td></tr></table></figure>
-<h3 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h3><p><em>/usr/local/etc/nginx/nginx.conf</em></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://todayisall.github.io/2017/07/09/mac-install-nginx/" data-id="cj4zm0m650000f69fgb9s890b" class="article-share-link">Partager</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-  
 
 </section>
         
