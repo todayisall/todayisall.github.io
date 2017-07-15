@@ -17,7 +17,7 @@
 <meta property="og:image" content="https://todayisall.github.io/2017/07/10/generate-echarts-map-data/images/17/07/3-jj-yy.png">
 <meta property="og:image" content="https://todayisall.github.io/2017/07/10/generate-echarts-map-data/images/17/07/4-jj-bl.png">
 <meta property="og:image" content="https://todayisall.github.io/2017/07/10/generate-echarts-map-data/images/17/07/5-jj-dc.png">
-<meta property="og:updated_time" content="2017-07-14T14:42:41.000Z">
+<meta property="og:updated_time" content="2017-07-15T12:53:03.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="generate echarts map data">
 <meta name="twitter:description" content="生成echarts 的mapdata数据// todo1 附上,制作好的地图源文件. 总体分两步.  获取geoJson数据. 优化geoJson数据.(geoJson 文件太大, 一般优化后至少是原来的1/10).  (一)获取geoJson数据.目前没有发现可以直接使用的geoJson 数据(除了官网提供的数据), 目前都是在地图网站下载的 *.shp文件, 然后通过工具转换成geoJson.">
@@ -106,7 +106,9 @@
 <h3 id="安装转换工具"><a href="#安装转换工具" class="headerlink" title="安装转换工具"></a>安装转换工具</h3><h4 id="mac-安装-通过brew-安装"><a href="#mac-安装-通过brew-安装" class="headerlink" title="mac 安装(通过brew, 安装.)"></a>mac 安装(通过brew, 安装.)</h4><h5 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ brew install gdal</div></pre></td></tr></table></figure>
 <h5 id="测试"><a href="#测试" class="headerlink" title="测试."></a>测试.</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ gdalinfo --version</div></pre></td></tr></table></figure>
 <p>如果出现GDAL version 就表示安装成功了.</p>
-<h4 id="window-安装"><a href="#window-安装" class="headerlink" title="window 安装."></a>window 安装.</h4><p> // todo 2 </p>
+<h4 id="window-安装"><a href="#window-安装" class="headerlink" title="window 安装."></a>window 安装.</h4><p>因为官方版本,需要VC++,或者python,或者java 编译,有点复杂. 所以装一个osgeo4w, 这个有exe版本的可以直接安装，装好这个就可以使用org2org了.</p>
+<p>下载地址: <a href="http://trac.osgeo.org/osgeo4w/" target="_blank" rel="external">OsGeo4w</a></p>
+<p>安装好后,打开桌面上的OsGeo4w shell 既可以使用org2org 命令转换文件了.</p>
 <h3 id="下载-shp-地图源文件-地图数据来自-Natural-Earth"><a href="#下载-shp-地图源文件-地图数据来自-Natural-Earth" class="headerlink" title="下载*.shp 地图源文件.地图数据来自 Natural Earth"></a>下载*.shp 地图源文件.地图数据来自 <a href="http://www.naturalearthdata.com/" target="_blank" rel="external">Natural Earth</a></h3><ul>
 <li><p>带有省份的<a href="http://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/cultural/ne_10m_admin_1_states_provinces_lakes.zip" target="_blank" rel="external">地图源文件</a></p>
 </li>
@@ -133,7 +135,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://todayisall.github.io/2017/07/10/generate-echarts-map-data/" data-id="cj53xv8v30000fs9fjbyhv2v3" class="article-share-link">Share</a>
+      <a data-url="https://todayisall.github.io/2017/07/10/generate-echarts-map-data/" data-id="cj55ak2oj0000el9fyj47rb21" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/echart-geoJson-map-data/">echart geoJson map data</a></li></ul>
