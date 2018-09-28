@@ -13,16 +13,16 @@
 <meta property="og:site_name" content="notes">
 <meta property="og:description" content="生成echarts 的mapdata数据// todo1 附上,制作好的地图源文件. 总体分两步.  获取geoJson数据. 优化geoJson数据.(geoJson 文件太大, 一般优化后至少是原来的1/10).  (一)获取geoJson数据.目前没有发现可以直接使用的geoJson 数据(除了官网提供的数据), 目前都是在地图网站下载的 *.shp文件, 然后通过工具转换成geoJson.">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://todayisall.github.io/2017/07/10/generate-echarts-map-data/images/17/07/1-jj-sc.png">
-<meta property="og:image" content="https://todayisall.github.io/2017/07/10/generate-echarts-map-data/images/17/07/2-jj-jh.png">
-<meta property="og:image" content="https://todayisall.github.io/2017/07/10/generate-echarts-map-data/images/17/07/3-jj-yy.png">
-<meta property="og:image" content="https://todayisall.github.io/2017/07/10/generate-echarts-map-data/images/17/07/4-jj-bl.png">
-<meta property="og:image" content="https://todayisall.github.io/2017/07/10/generate-echarts-map-data/images/17/07/5-jj-dc.png">
-<meta property="og:updated_time" content="2017-07-15T12:53:03.000Z">
+<meta property="og:image" content="https://todayisall.github.io/images/17/07/1-jj-sc.png">
+<meta property="og:image" content="https://todayisall.github.io/images/17/07/2-jj-jh.png">
+<meta property="og:image" content="https://todayisall.github.io/images/17/07/3-jj-yy.png">
+<meta property="og:image" content="https://todayisall.github.io/images/17/07/4-jj-bl.png">
+<meta property="og:image" content="https://todayisall.github.io/images/17/07/5-jj-dc.png">
+<meta property="og:updated_time" content="2018-09-28T14:58:24.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="generate echarts map data">
 <meta name="twitter:description" content="生成echarts 的mapdata数据// todo1 附上,制作好的地图源文件. 总体分两步.  获取geoJson数据. 优化geoJson数据.(geoJson 文件太大, 一般优化后至少是原来的1/10).  (一)获取geoJson数据.目前没有发现可以直接使用的geoJson 数据(除了官网提供的数据), 目前都是在地图网站下载的 *.shp文件, 然后通过工具转换成geoJson.">
-<meta name="twitter:image" content="https://todayisall.github.io/2017/07/10/generate-echarts-map-data/images/17/07/1-jj-sc.png">
+<meta name="twitter:image" content="https://todayisall.github.io/images/17/07/1-jj-sc.png">
   
     <link rel="alternate" href="/atom.xml" title="notes" type="application/atom+xml">
   
@@ -119,24 +119,24 @@
 </ul>
 <h2 id="二-简化数据"><a href="#二-简化数据" class="headerlink" title="(二)简化数据."></a>(二)简化数据.</h2><p>一般geoJson格式的数据很大,实际并不需要那么精确, 就需要做一下精简,一般是原来的1/10左右.</p>
 <h3 id="使用http-mapshaper-org-提供的简化功能-精简geoJson"><a href="#使用http-mapshaper-org-提供的简化功能-精简geoJson" class="headerlink" title="使用http://mapshaper.org/ 提供的简化功能, 精简geoJson"></a>使用<a href="http://mapshaper.org/" target="_blank" rel="noopener">http://mapshaper.org/</a> 提供的简化功能, 精简geoJson</h3><ol>
-<li><p>选择上传文件<br><img src="./images/17/07/1-jj-sc.png" alt="选择文件"></p>
+<li><p>选择上传文件<br><img src="/images/17/07/1-jj-sc.png" alt="选择文件"></p>
 </li>
-<li><p>选择简化<br><img src="./images/17/07/2-jj-jh.png" alt="选择文件"></p>
+<li><p>选择简化<br><img src="/images/17/07/2-jj-jh.png" alt="选择文件"></p>
 </li>
-<li><p>选择apply<br><img src="./images/17/07/3-jj-yy.png" alt="选择文件"></p>
+<li><p>选择apply<br><img src="/images/17/07/3-jj-yy.png" alt="选择文件"></p>
 </li>
-<li><p>选择比例<br><img src="./images/17/07/4-jj-bl.png" alt=""></p>
+<li><p>选择比例<br><img src="/images/17/07/4-jj-bl.png" alt=""></p>
 </li>
-<li><p>导出<br><img src="./images/17/07/5-jj-dc.png" alt=""></p>
+<li><p>导出<br><img src="/images/17/07/5-jj-dc.png" alt=""></p>
 </li>
 </ol>
-<h3 id="去掉多余的字段-去掉多余的字段-简化小数位数为6位"><a href="#去掉多余的字段-去掉多余的字段-简化小数位数为6位" class="headerlink" title="去掉多余的字段(去掉多余的字段,简化小数位数为6位.)."></a>去掉多余的字段(去掉多余的字段,简化小数位数为6位.).</h3><p>执行js 脚本机一部简化，数据<br><a href="./other/17/07/app.js">脚本</a></p>
+<h3 id="去掉多余的字段-去掉多余的字段-简化小数位数为6位"><a href="#去掉多余的字段-去掉多余的字段-简化小数位数为6位" class="headerlink" title="去掉多余的字段(去掉多余的字段,简化小数位数为6位.)."></a>去掉多余的字段(去掉多余的字段,简化小数位数为6位.).</h3><p>执行js 脚本机一部简化，数据<br><a href="/other/17/07/app.js">脚本</a></p>
 <p>ps: 本文参考了 <a href="http://d3.decembercafe.org/pages/lessons/15.html" target="_blank" rel="noopener">http://d3.decembercafe.org/pages/lessons/15.html</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://todayisall.github.io/2017/07/10/generate-echarts-map-data/" data-id="cjmm4k9b90000p5fyun2zbbqq" class="article-share-link">Share</a>
+      <a data-url="https://todayisall.github.io/2017/07/10/generate-echarts-map-data/" data-id="cjmm4n35o0000pifyf0nqx487" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/echart-geoJson-map-data/">echart geoJson map data</a></li></ul>
