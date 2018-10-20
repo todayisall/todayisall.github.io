@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>JavaScript &quot;+&quot; 运算符 | notes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="JavaScript 数据类型： 基本数据类型：Null , Undefined, Number, String, Boolean, Sysbol(ES6); 复杂数据类型：Object   “+” 作为一元操作符(正负号中的正号) 作用：对于数值类型, 不会产生任何影响； 对于非数值 转换为数值；  规则： 基本数据类型 调用Number(), 函数进行转换; 复杂数据类型 调用valueOf">
+<meta name="keywords" content="javascript, +">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript &quot;+&quot; 运算符">
+<meta property="og:url" content="https://todayisall.github.io/2018/10/20/javascript-运算符/index.html">
+<meta property="og:site_name" content="notes">
+<meta property="og:description" content="JavaScript 数据类型： 基本数据类型：Null , Undefined, Number, String, Boolean, Sysbol(ES6); 复杂数据类型：Object   “+” 作为一元操作符(正负号中的正号) 作用：对于数值类型, 不会产生任何影响； 对于非数值 转换为数值；  规则： 基本数据类型 调用Number(), 函数进行转换; 复杂数据类型 调用valueOf">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-10-20T06:08:24.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JavaScript &quot;+&quot; 运算符">
+<meta name="twitter:description" content="JavaScript 数据类型： 基本数据类型：Null , Undefined, Number, String, Boolean, Sysbol(ES6); 复杂数据类型：Object   “+” 作为一元操作符(正负号中的正号) 作用：对于数值类型, 不会产生任何影响； 对于非数值 转换为数值；  规则： 基本数据类型 调用Number(), 函数进行转换; 复杂数据类型 调用valueOf">
+  
+    <link rel="alternate" href="/atom.xml" title="notes" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">notes</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">todayisall&#39;s notes~</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://todayisall.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-javascript-运算符" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/10/20/javascript-运算符/" class="article-date">
+  <time datetime="2018-10-20T03:33:20.000Z" itemprop="datePublished">2018-10-20</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      JavaScript &quot;+&quot; 运算符
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<h2 id="JavaScript-数据类型："><a href="#JavaScript-数据类型：" class="headerlink" title="JavaScript 数据类型："></a>JavaScript 数据类型：</h2><ul>
+<li>基本数据类型：Null , Undefined, Number, String, Boolean, Sysbol(ES6);</li>
+<li>复杂数据类型：Object</li>
+</ul>
+<hr>
+<h2 id="“-”-作为一元操作符-正负号中的正号"><a href="#“-”-作为一元操作符-正负号中的正号" class="headerlink" title="“+” 作为一元操作符(正负号中的正号)"></a>“+” 作为一元操作符(正负号中的正号)</h2><ul>
+<li>作用：对于数值类型, 不会产生任何影响； 对于非数值 转换为数值； </li>
+<li>规则：<ul>
+<li>基本数据类型 调用Number(), 函数进行转换;</li>
+<li>复杂数据类型 调用valueOf,或者toString(), 进行转换.</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li><p>+ Null -&gt; 0</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">+ null  // 0</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>+ Undefined -&gt; NaN;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">+ undefined  // NaN</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>+ Number -&gt; Number</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">+ 10    // 10</span><br><span class="line">+ (-10)  // -10</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>+ String -&gt; to Number(); – 空字符串 -&gt; 0; 非空字符串 -&gt; NaN</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">+ &quot;&quot;  // 0;</span><br><span class="line">+ &apos;a&apos; // NaN</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>+ Boolean -&gt; to Number(); – false -&gt; 0; true -&gt; 1</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">+ false   // 0</span><br><span class="line">+ true  // 1</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>+ Object -&gt; valueOf()|| toString();</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">+ &#123;&#125;  // NaN  -- &#123;&#125; toString() 为 &quot;[object Object]&quot; 不能转换为数字.</span><br><span class="line"></span><br><span class="line">let o = &#123;</span><br><span class="line">  valueOf: function() &#123;</span><br><span class="line">    return -7;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">+ o // -7;</span><br><span class="line"></span><br><span class="line">let o2 = &#123;</span><br><span class="line">  valueOf: function() &#123;</span><br><span class="line">    return -7;</span><br><span class="line">  &#125;,</span><br><span class="line">  toString: function() &#123;</span><br><span class="line">    return -9;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">+ o2 // -7;</span><br><span class="line"></span><br><span class="line">let o3 = &#123;</span><br><span class="line">  toString: function() &#123;</span><br><span class="line">    return -9;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">+ o3 // -9;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="“-”-作为二元操作符-加减乘除的"><a href="#“-”-作为二元操作符-加减乘除的" class="headerlink" title="“+” 作为二元操作符(加减乘除的+)"></a>“+” 作为二元操作符(加减乘除的+)</h2><ul>
+<li>作用: 两个操作数的计算.</li>
+<li>规则: <ol>
+<li>如果有一个操作数为String类型, 则转换为String类型, 然后进行字符串拼接操作.</li>
+<li>如果一个操作数为Number 且另一个操作数不是String, Object， 则调用Number(), 转换为数字.</li>
+<li>关于Infinity</li>
+<li>关于0</li>
+<li>一个操作数为Object, 另一个操作数为Boolean,Number, 则转换为字符串. null 和undefined  调用String();</li>
+</ol>
+</li>
+</ul>
+<ul>
+<li><ol>
+<li>一个操作数为String<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&apos;1&apos; + null  // &quot;1null&quot; -- null 转换为String “null”</span><br><span class="line">&apos;1&apos; + undefined // &quot;1undefined&quot;  -- undefined 转换为 “undefined”</span><br><span class="line">&apos;1&apos; + 1 // &quot;11&quot;</span><br><span class="line">&apos;1&apos; + &apos;1&apos;  // &quot;11&quot;</span><br><span class="line">&apos;1&apos; + true // &quot;1true&quot;</span><br><span class="line">&quot;1&quot; + &#123;&#125;  // &quot;1[object Object]&quot;  -- &#123;&#125; 转换为 &quot;[object Object]&quot;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>一个操作数为Number<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1 + null  // 1</span><br><span class="line">1 + undefined  // NaN</span><br><span class="line">1 + 1  // 2</span><br><span class="line">1 + &apos;1&apos;  // &quot;11&quot;</span><br><span class="line">1 + true // 2</span><br><span class="line">1 + &#123;&#125;  // &quot;1[object Object]&quot;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+<li><ol start="3">
+<li>Infinity(正无穷大)<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Infinity + Infinity  // Infinity</span><br><span class="line">-Infinity + -Infinity  // -Infinity</span><br><span class="line">Infinity + -Infinity  // NaN</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+<li><ol start="4">
+<li>关于0<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">0 + 0  // 0</span><br><span class="line">-0 + -0   // -0</span><br><span class="line">0 + -0  // 0</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+<li><ol start="5">
+<li>一个操作数为{}(与操作数的顺序有关分成两种情况)<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#125; + null //  0 -- &#123;&#125; 被解析成语句段. 实际为&#123;&#125;; + null; null 转换为数值为0</span><br><span class="line">null + &#123;&#125; // &quot;null[object Object]&quot; 都转换为字符串, 然后拼接.</span><br><span class="line"></span><br><span class="line">&#123;&#125; + undefined // NaN</span><br><span class="line">undefined + &#123;&#125; // &quot;undefined[object Object]&quot;</span><br><span class="line"></span><br><span class="line">&#123;&#125; + 1; // 1</span><br><span class="line">1 + &#123;&#125;  // &quot;1[object Object]&quot;</span><br><span class="line"></span><br><span class="line">&#123;&#125; + &quot;1&quot; // 1</span><br><span class="line">&quot;1&quot; + &#123;&#125; // &quot;1[object Object]&quot;</span><br><span class="line"></span><br><span class="line">&#123;&#125; + true // 1</span><br><span class="line">true + &#123;&#125; // &quot;true[object Object]&quot;</span><br><span class="line"></span><br><span class="line">&#123;&#125; + &#123;&#125; // &quot;[object Object][object Object]&quot; -- 注意这种情况, 原理上应该是“object Object]&quot;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+</ul>
+<hr>
+<h2 id="其他情况"><a href="#其他情况" class="headerlink" title="其他情况."></a>其他情况.</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">+ []  // 0 -- [] 转换为数组为 0</span><br><span class="line">+ [1] // 1 -- [1] 转换数组为 1</span><br><span class="line"></span><br><span class="line">&quot;1&quot; + [] // &quot;1&quot;   -- [1] 转换为字符串为 ”“</span><br><span class="line">&quot;1&quot; + [1] // &quot;11&quot;  -- [1] 转换为字符串为 ”1“</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://todayisall.github.io/2018/10/20/javascript-运算符/" data-id="cjngw8aby000165fyrg6l8db8" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript, +</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/07/11/一日一句/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">一日一句</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/echart-geoJson-map-data/">echart geoJson map data</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript, +</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/生活/">生活</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/echart-geoJson-map-data/" style="font-size: 10px;">echart geoJson map data</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript, +</a> <a href="/tags/生活/" style="font-size: 10px;">生活</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/10/20/javascript-运算符/">JavaScript &quot;+&quot; 运算符</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/11/一日一句/">一日一句</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/10/generate-echarts-map-data/">generate echarts map data</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/09/mac-install-nginx/">mac install nginx</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 todayisall<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
