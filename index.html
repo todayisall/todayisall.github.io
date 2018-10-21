@@ -66,6 +66,60 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-‘javascript-’" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/10/21/‘javascript-’/" class="article-date">
+  <time datetime="2018-10-21T01:55:09.000Z" itemprop="datePublished">2018-10-21</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/10/21/‘javascript-’/">‘JavaScript == 云算法’</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="‘-’-比较两个操作数是否相等，当两边类型不同进行隐式类型转换"><a href="#‘-’-比较两个操作数是否相等，当两边类型不同进行隐式类型转换" class="headerlink" title="‘==’ 比较两个操作数是否相等，当两边类型不同进行隐式类型转换."></a>‘==’ 比较两个操作数是否相等，当两边类型不同进行隐式类型转换.</h2><ul>
+<li>规则：<ul>
+<li>一个操作数为boolean, 转换为数值进行比较.</li>
+<li>一个数值一个字符串, 转换为数值进行比较.</li>
+<li>一个对象另一个不是, 调用valueOf，转换为基本数据类型进行比较.</li>
+<li>null == undefined // true;  undefined 和null, 不进行转换。</li>
+<li>有一个操作数为NaN，结果NaN</li>
+<li>两个对象比较他们是否是同一个引用.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="一个操作数为Boolean"><a href="#一个操作数为Boolean" class="headerlink" title="一个操作数为Boolean."></a>一个操作数为Boolean.</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">true == null  // false</span><br><span class="line">false == null  // false</span><br><span class="line"></span><br><span class="line">true == undefined // false</span><br><span class="line">false == undefined // false</span><br><span class="line"></span><br><span class="line">true == 1  // true -- true 转换为数值 为 1</span><br><span class="line">false == 0 // true  -- false 转换为数值为 0</span><br><span class="line"></span><br><span class="line">true == &apos;1&apos; // true</span><br><span class="line">true == &apos;true&apos; // false</span><br><span class="line"></span><br><span class="line">true == true // true;</span><br><span class="line">false == false // true</span><br><span class="line"></span><br><span class="line">true == &#123;&#125; // false</span><br><span class="line">true == [1] // true  -- [1] 转换数值为1</span><br></pre></td></tr></table></figure>
+<h3 id="一个数值，一个字符串-转换为数值进行比较"><a href="#一个数值，一个字符串-转换为数值进行比较" class="headerlink" title="一个数值，一个字符串. 转换为数值进行比较."></a>一个数值，一个字符串. 转换为数值进行比较.</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1 == &apos;1&apos; // true</span><br></pre></td></tr></table></figure>
+<h3 id="一个对象是Object"><a href="#一个对象是Object" class="headerlink" title="一个对象是Object"></a>一个对象是Object</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#125; == null // 报错, &#123;&#125; 解析为语句块, == null, 非法.</span><br><span class="line">null == &#123;&#125; // false</span><br><span class="line">undefined == &#123;&#125; // false</span><br><span class="line">&#123;&#125; == undefined // 报错.</span><br><span class="line">[0] == null // false</span><br><span class="line"></span><br><span class="line">1 == &#123;&#125; // false</span><br><span class="line">[1] == 1 // true</span><br><span class="line"></span><br><span class="line">&apos;1&apos; == &#123;&#125; // false</span><br><span class="line">[1] == &apos;1&apos; true;</span><br><span class="line"></span><br><span class="line">&#123;&#125; == &#123;&#125; // false ;  -- 两个对象要比较引用是否相同.</span><br></pre></td></tr></table></figure>
+<h3 id="一个操作数是NaN"><a href="#一个操作数是NaN" class="headerlink" title="一个操作数是NaN"></a>一个操作数是NaN</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">NaN == NaN // NaN</span><br><span class="line">NaN == 1 // NaN</span><br><span class="line">NaN == &#123;&#125;  // NaN</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://todayisall.github.io/2018/10/21/‘javascript-’/" data-id="cjni9bg0d0004p7fy0dgsacsc" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript ==</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-javascript-运算符" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/10/20/javascript-运算符/" class="article-date">
@@ -161,12 +215,12 @@
 </li>
 </ul>
 <hr>
-<h2 id="其他情况"><a href="#其他情况" class="headerlink" title="其他情况."></a>其他情况.</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">+ []  // 0 -- [] 转换为数组为 0</span><br><span class="line">+ [1] // 1 -- [1] 转换数组为 1</span><br><span class="line"></span><br><span class="line">&quot;1&quot; + [] // &quot;1&quot;   -- [1] 转换为字符串为 ”“</span><br><span class="line">&quot;1&quot; + [1] // &quot;11&quot;  -- [1] 转换为字符串为 ”1“</span><br></pre></td></tr></table></figure>
+<h2 id="其他情况"><a href="#其他情况" class="headerlink" title="其他情况."></a>其他情况.</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">+ []  // 0 -- [] 转换为数组为 0</span><br><span class="line">+ [1] // 1 -- [1] 转换数组为 1</span><br><span class="line"></span><br><span class="line">&quot;1&quot; + [] // &quot;1&quot;   -- [] 转换为字符串为 ”“</span><br><span class="line">&quot;1&quot; + [1] // &quot;11&quot;  -- [1] 转换为字符串为 ”1“</span><br><span class="line"></span><br><span class="line">&#123;&#125; + [] // 0  -- [[] 转换为数组为 0</span><br><span class="line">[] + &#123;&#125; // &quot;[object Object]&quot; [] 转换为字符串为 ”“</span><br></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://todayisall.github.io/2018/10/20/javascript-运算符/" data-id="cjngw8aby000165fyrg6l8db8" class="article-share-link">Share</a>
+      <a data-url="https://todayisall.github.io/2018/10/20/javascript-运算符/" data-id="cjni9bg010000p7fy8pluc42z" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript, +</a></li></ul>
@@ -226,7 +280,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://todayisall.github.io/2017/07/11/一日一句/" data-id="cjngw8ach000765fyj45cxatv" class="article-share-link">Share</a>
+      <a data-url="https://todayisall.github.io/2017/07/11/一日一句/" data-id="cjni9bg0f0005p7fyyo8jdm3a" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/生活/">生活</a></li></ul>
@@ -299,7 +353,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://todayisall.github.io/2017/07/10/generate-echarts-map-data/" data-id="cjngw8abu000065fyewa5vn7l" class="article-share-link">Share</a>
+      <a data-url="https://todayisall.github.io/2017/07/10/generate-echarts-map-data/" data-id="cjni9bg060001p7fylht0ua2l" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/echart-geoJson-map-data/">echart geoJson map data</a></li></ul>
@@ -342,7 +396,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://todayisall.github.io/2017/07/09/mac-install-nginx/" data-id="cjngw8ac4000365fydckup97s" class="article-share-link">Share</a>
+      <a data-url="https://todayisall.github.io/2017/07/09/mac-install-nginx/" data-id="cjni9bg0b0003p7fycr3qi7xm" class="article-share-link">Share</a>
       
       
     </footer>
@@ -364,7 +418,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/echart-geoJson-map-data/">echart geoJson map data</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript, +</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/生活/">生活</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript ==</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/echart-geoJson-map-data/">echart geoJson map data</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript, +</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/生活/">生活</a></li></ul>
     </div>
   </div>
 
@@ -374,7 +428,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/echart-geoJson-map-data/" style="font-size: 10px;">echart geoJson map data</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript, +</a> <a href="/tags/生活/" style="font-size: 10px;">生活</a>
+      <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript ==</a> <a href="/tags/echart-geoJson-map-data/" style="font-size: 10px;">echart geoJson map data</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript, +</a> <a href="/tags/生活/" style="font-size: 10px;">生活</a>
     </div>
   </div>
 
@@ -394,6 +448,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2018/10/21/‘javascript-’/">‘JavaScript == 云算法’</a>
+          </li>
         
           <li>
             <a href="/2018/10/20/javascript-运算符/">JavaScript &quot;+&quot; 运算符</a>
