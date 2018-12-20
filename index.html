@@ -66,6 +66,49 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-‘emmet-小记’" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/12/20/‘emmet-小记’/" class="article-date">
+  <time datetime="2018-12-20T14:35:42.000Z" itemprop="datePublished">2018-12-20</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/12/20/‘emmet-小记’/">‘emmet-小记’</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-子元素"><a href="#1-子元素" class="headerlink" title="1. 子元素"></a>1. 子元素</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">div&gt;ul&gt;li</span><br><span class="line"></span><br><span class="line">&lt;div&gt;</span><br><span class="line">    &lt;ul&gt;</span><br><span class="line">        &lt;li&gt;&lt;/li&gt;</span><br><span class="line">    &lt;/ul&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="2-兄弟元素"><a href="#2-兄弟元素" class="headerlink" title="2. 兄弟元素"></a>2. 兄弟元素</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">div+p+bq</span><br><span class="line"></span><br><span class="line">&lt;div&gt;&lt;/div&gt;</span><br><span class="line">&lt;p&gt;&lt;/p&gt;</span><br><span class="line">&lt;blockquote&gt;&lt;/blockquote&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="3"><a href="#3" class="headerlink" title="3. *"></a>3. *</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">div&gt;(header&gt;ul&gt;li*2&gt;a)+footer&gt;p</span><br><span class="line"></span><br><span class="line">&lt;div&gt;</span><br><span class="line">    &lt;header&gt;</span><br><span class="line">        &lt;ul&gt;</span><br><span class="line">            &lt;li&gt;&lt;a href=&quot;&quot;&gt;&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">            &lt;li&gt;&lt;a href=&quot;&quot;&gt;&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">        &lt;/ul&gt;</span><br><span class="line">    &lt;/header&gt;</span><br><span class="line">    &lt;footer&gt;</span><br><span class="line">        &lt;p&gt;&lt;/p&gt;</span><br><span class="line">    &lt;/footer&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="4-id-和-class-元素"><a href="#4-id-和-class-元素" class="headerlink" title="4. id 和 class 元素."></a>4. id 和 class 元素.</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">div#header+div.page</span><br><span class="line"></span><br><span class="line">&lt;div id=&quot;header&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;div class=&quot;page&quot;&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="5-属性"><a href="#5-属性" class="headerlink" title="5. 属性."></a>5. 属性.</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">td[title=&quot;Hello world!&quot; colspan=3]</span><br><span class="line"></span><br><span class="line">&lt;td title=&quot;Hello world!&quot; colspan=&quot;3&quot;&gt;&lt;/td&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="6"><a href="#6" class="headerlink" title="6. $."></a>6. $.</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">ul&gt;li.item$*5</span><br><span class="line"></span><br><span class="line">&lt;ul&gt;</span><br><span class="line">    &lt;li class=&quot;item1&quot;&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li class=&quot;item2&quot;&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li class=&quot;item3&quot;&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li class=&quot;item4&quot;&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li class=&quot;item5&quot;&gt;&lt;/li&gt;</span><br><span class="line">&lt;/ul&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="7-内容"><a href="#7-内容" class="headerlink" title="7. 内容"></a>7. 内容</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a&#123;Click me&#125;</span><br><span class="line"></span><br><span class="line">&lt;a href=&quot;&quot;&gt;Click me&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://todayisall.github.io/2018/12/20/‘emmet-小记’/" data-id="cjpwpt4jt0003es9fs8jvtfq8" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-npm-小记" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/11/21/npm-小记/" class="article-date">
@@ -93,7 +136,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://todayisall.github.io/2018/11/21/npm-小记/" data-id="cjpnnjsyw0004og9f6va6dsf9" class="article-share-link">Share</a>
+      <a data-url="https://todayisall.github.io/2018/11/21/npm-小记/" data-id="cjpwpt4jy0008es9f1nrqzi4q" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/npm-javascript/">npm, javascript</a></li></ul>
@@ -147,7 +190,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://todayisall.github.io/2018/10/21/‘javascript-’/" data-id="cjpnnjszc000dog9fr6npm5zw" class="article-share-link">Share</a>
+      <a data-url="https://todayisall.github.io/2018/10/21/‘javascript-’/" data-id="cjpwpt4jw0005es9fc4m015hg" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript ==</a></li></ul>
@@ -259,7 +302,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://todayisall.github.io/2018/10/20/javascript-运算符/" data-id="cjpnnjsyr0001og9f6mkp2nnz" class="article-share-link">Share</a>
+      <a data-url="https://todayisall.github.io/2018/10/20/javascript-运算符/" data-id="cjpwpt4jp0001es9f5p0x6ydd" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript, +</a></li></ul>
@@ -324,7 +367,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://todayisall.github.io/2017/07/11/一日一句/" data-id="cjpnnjsyv0003og9f1bwz28dy" class="article-share-link">Share</a>
+      <a data-url="https://todayisall.github.io/2017/07/11/一日一句/" data-id="cjpwpt4k10009es9fs2uhjqvn" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/生活/">生活</a></li></ul>
@@ -397,7 +440,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://todayisall.github.io/2017/07/10/generate-echarts-map-data/" data-id="cjpnnjsyn0000og9fw2e9f0kf" class="article-share-link">Share</a>
+      <a data-url="https://todayisall.github.io/2017/07/10/generate-echarts-map-data/" data-id="cjpwpt4jl0000es9frwdylisx" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/echart-geoJson-map-data/">echart geoJson map data</a></li></ul>
@@ -440,7 +483,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://todayisall.github.io/2017/07/09/mac-install-nginx/" data-id="cjpnnjsyy0005og9fi73tt21w" class="article-share-link">Share</a>
+      <a data-url="https://todayisall.github.io/2017/07/09/mac-install-nginx/" data-id="cjpwpt4jv0004es9f122txx3j" class="article-share-link">Share</a>
       
       
     </footer>
@@ -481,7 +524,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li></ul>
     </div>
   </div>
 
@@ -492,6 +535,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2018/12/20/‘emmet-小记’/">‘emmet-小记’</a>
+          </li>
         
           <li>
             <a href="/2018/11/21/npm-小记/">npm 小记</a>
@@ -507,10 +554,6 @@
         
           <li>
             <a href="/2017/07/11/一日一句/">一日一句</a>
-          </li>
-        
-          <li>
-            <a href="/2017/07/10/generate-echarts-map-data/">generate echarts map data</a>
           </li>
         
       </ul>
